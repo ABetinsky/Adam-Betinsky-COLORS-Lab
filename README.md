@@ -14,8 +14,23 @@ The user experience of the website is as follows:
 
 3. Once a user successfully accesses one of the two test accounts, they have 3 options:
  
-    - They can add a new color to the dictionary by typing it in to the appropiate text box, and then hitting the "Add Color" button. (NOTE: If the user adds a color that has been previously added, it will duplicate the original color).
+    - They can add a new color to the dictionary by typing it in to the appropiate text box, and then hitting the "Add Color" button. Although the website is supposed to represent a dictionary of colors, any string can technically be added. (NOTE: If the user inputs a string that has been previously added, it will duplicate the original string).
 
     - They can search a color to see if it has previously been added to the dictionary by typing a color into the appropriate text box and then clicking the "Search Color" button. The website does support partial matching, so it's possible to get more than one color to appear in the search results. For example, if the colors "Blue" and "Black" were previously added to the dictionary, and the user search for the color "Bl", the website would return "Blue" and "Black" at the same time. 
 
     - They can return to the home page by clicking the "Log Out" button. Once the button is pressed, they will be redirected to the home page. Should a user want to add or search colors again, they must re login by following the above steps again. 
+
+
+## Technologies Used
+
+The following technologies are used in implementing the website:
+
+- The LAMP Stack - That is: Linux, Apache, MySQL, PHP
+- DigitalOcean (For cloud hosting on a server. Note that you can host the website on any LAMP server. It doesn't have to strictly be DigitalOcean)
+- HTML
+- CSS
+- JavaScript
+- Git
+- GitHub
+
+It's important to also note that some parts of this website contain code written by AI (specifically, the php files). Please read the AI disclosures in the main directory of this repository to leaarn more.
