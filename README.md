@@ -14,8 +14,8 @@ The user experience of the website is as follows:
 
 3. Once a user successfully accesses one of the two test accounts, they have 3 options:
  
-  A. They can add a new color to the dictionary by typing it in to the appropiate text box, and then hitting the "Add Color" button. (NOTE: If the user adds a color that has been previously added, it will duplicate the original color).
+  - . They can add a new color to the dictionary by typing it in to the appropiate text box, and then hitting the "Add Color" button. (NOTE: If the user adds a color that has been previously added, it will duplicate the original color).
 
-  B. They can search a color to see if it has previously been added to the dictionary by typing a color into the appropriate text box and then clicking the "Search Color" button. The website does support partial matching, so it's possible to get more than one color to appear in the search results. For example, if the colors "Blue" and "Black" were previously added to the dictionary, and the user search for the color "Bl", the website would return "Blue" and "Black" at the same time. 
+  - . They can search a color to see if it has previously been added to the dictionary by typing a color into the appropriate text box and then clicking the "Search Color" button. The website does support partial matching, so it's possible to get more than one color to appear in the search results. For example, if the colors "Blue" and "Black" were previously added to the dictionary, and the user search for the color "Bl", the website would return "Blue" and "Black" at the same time. 
 
-  C. They can return to the home page by clicking the "Log Out" button. Once the button is pressed, they will be redirected to the home page. Should a user want to add or search colors again, they must re login by following the above steps again. 
+  - . They can return to the home page by clicking the "Log Out" button. Once the button is pressed, they will be redirected to the home page. Should a user want to add or search colors again, they must re login by following the above steps again. 
