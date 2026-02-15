@@ -1,5 +1,5 @@
 # Adam-Betinsky-COLORS-Lab
-This repository contains all of the files I used to complete the "COLORS Lab" assignment for Processes of Object Oriented Software Development in Spring of 2026
+This repository contains all of the files build the "COLORS Lab" website. The "COLORS LAB" website was an assignment for my Processes of Object Oriented Software Development class (COP 4331C) with Dr. Aashish Yadavally at The University of Central Florida in Orlando, FL in January 2026.
 
-## Test
+## What is the "COLORS LAB"?
 
