@@ -1,3 +1,16 @@
+//Adam Betinsky
+
+/*
+ PLEASE NOTE:
+
+ 1. Lines 16 - 23 were provided by ChatGPT to solve HTTPS and broswer security rule issues.
+
+ 2. Lines 30 - 32 were provided by ChatGPT to hide the API keys from the public, while also keeping functionality.
+
+ See the AI Disclosures in the repository for the details on why I used ChatGPT in these scenarios.
+
+ ALL OTHER LINES OF CODE WERE PROVIDED WITH THE ASSIGNMENT
+*/
 
 <?php
 header("Access-Control-Allow-Origin: *");
