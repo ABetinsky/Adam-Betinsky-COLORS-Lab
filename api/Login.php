@@ -5,7 +5,7 @@
 
  1. Lines 16 - 23 were provided by ChatGPT to solve HTTPS and broswer security rule issues.
 
- 2. Lines 30 - 32 were provided by ChatGPT to hide the API keys from the public, while also keeping functionality.
+ 2. Lines 30 - 32 were provided by ChatGPT to hide the user passwords from the public, while also keeping functionality.
 
  See the AI Disclosures in the repository for the details on why I used ChatGPT in these scenarios.
 
