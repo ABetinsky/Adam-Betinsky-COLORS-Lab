@@ -104,4 +104,4 @@ The following limitations can be observed for the website:
 
 - There is no way to ensure duplicate strings inputted into the dictionary don't show up more than once. Perhaps this is a feature that could be added later.
 
-### Website made by Adam Betinsky in January 2026 using the instructions provided. GitHub Repository made in February 2026.
+### Website made by Adam Betinsky in January 2026 using the instructions provided in the original assignment. GitHub Repository made in February 2026.
