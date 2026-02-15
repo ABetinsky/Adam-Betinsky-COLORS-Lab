@@ -1,3 +1,9 @@
+/*
+Adam Betinsky
+
+THE REMAINING PORTIONS OF THIS FILE WERE PROVIDED WITH THE ASSIGNMENT
+*/
+
 const urlBase = 'http://COP4331-5.com/LAMPAPI';
 const extension = 'php';
 

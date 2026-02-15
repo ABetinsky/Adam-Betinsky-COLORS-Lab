@@ -1,4 +1,10 @@
 /*
+Adam Betinsky
+
+THE REMAINING PORTIONS OF THIS FILE WERE PROVIDED WITH THE ASSIGNMENT
+*/
+
+/*
  * JavaScript MD5
  * https://github.com/blueimp/JavaScript-MD5
  *
