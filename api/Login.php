@@ -4,7 +4,6 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 
-// Handle browser preflight request
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
@@ -15,7 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 	$firstName = "";
 	$lastName = "";
 
-	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331"); 	
+	require_once("config.php");
+
+    $conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+
 	if( $conn->connect_error )
 	{
 		returnWithError( $conn->connect_error );

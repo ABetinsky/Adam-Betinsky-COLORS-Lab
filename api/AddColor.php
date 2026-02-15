@@ -13,7 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 	$color = $inData["color"];
 	$userId = $inData["userId"];
 
-	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331");
+	
+	require_once("config.php");
+
+    $conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
