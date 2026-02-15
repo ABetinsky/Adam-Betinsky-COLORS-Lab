@@ -50,13 +50,13 @@ To implemt the website on your own, follow the steps listed in the "Getting Star
 
 4. SSH into the root of the server using the password you made in step 1. Rename  the "testIndex.html" file from the "providedDocumentationAndTestFiles" of this repository to "index.html". Then, put the file into the "/var/www/html" directory of your website.
 
-5. Wait a few minutes, and test that the above steps worked by seeing if the "testIndex.html" file loads when you go to your website on the internet. This may take up to 30 minutes or longer to fully work. DO NOT PROCEED until the prior steps are working. If you encounter issues, make sure to retrace your steps
+5. Wait a few minutes, and test that the above steps worked by seeing if the "testIndex.html" file loads when you go to your website on the internet. This may take up to 30 minutes or longer to fully work. DO NOT PROCEED until the prior steps are working. If you encounter issues, make sure to retrace your steps.
 
     - NOTE: By default, the website only include HTTP support and NOT HTTPS support. On some internet browsers (like Google Chrome), you need to add HTTPS support to meet the security requirements of the browser. To do this, use Certbot while SSH'd into the root of your server. You can find instructions on how to do this via a quick google search. 
 
 6. While SSH'd into the root of your server, access mySQL and create the COP4331 databse as described in the document mentioned above.
 
-7. While SSH'd into the root of your server, copy all of the non-testing directories in this repository (that is, copy the "api", and "public" directories) into the "/var/www/html" directory. Tools like PuTTY can make this easier, but you can always use simple bash commands like "scp". Leave them as is.
+7. While SSH'd into the root of your server, copy all of the non-testing directories in this repository (that is, copy the "api", and "public" directories) into the "/var/www/html" directory. Tools like PuTTY can make this easier, but you can always use simple bash commands like "scp". Leave the directories as is.
 
 8. In order to avoid posting user passwords on the internet, the PHP files use a configuration file titled "config.php" that is hidden in this repository. As such, you will need to add one into your "/var/www/html/api" directory to ensure the website functions correctly. The contents of this file should look like:
 
@@ -70,5 +70,36 @@ $DB_NAME = "COP4331";
 
 ```
 
-9. You've now completed the High-level Setup for the website!
+9. You've now completed the High-level Setup for the website! If you'd like, feel free to go back and add additional users to the website (as the default are 2 premade ones). Make sure to test everything and see if it works. If you encounter any issues, please reference the document mentioned at the start of this portion.
 
+## How to run and access the website
+
+Once you've setup the website, you can access it in 3 simple steps:
+
+1. Ensure that your cloud server is active.
+
+2. Go to your website's domain in the internet browser of your choice.
+
+3. Have fun on the website!
+
+## Assumptions, Limitations and AI Usage
+
+ This website is licensed under an Apache 2.0 license (I figured it was the best to use since the LAMP stack uses Apache).
+
+ As mentioned above, it's important to also note that some parts of this website contain code and/or were implemented based on instructions written by ChatGPT 5.2, an AI platform by Open AI (specifically, the PHP files and web browser security rule support). Please read the AI disclosures in the main directory of this repository to learn more.
+
+To use and implement the website, it is assumed that:
+
+- You have a strong internet connection.
+
+- You have properly set everything up properly on the website.
+
+The following limitations can be observed for the website:
+
+- The accounts on this website are pre-defined. There is no way to add another account without modifying the database (mySQL) and PHP files.
+
+- There is no E-mail authentication for each account. This means that if someone were to figure out the username and password of a user you defined, they can access the account.
+
+- There is no way to ensure duplicate strings inputted into the dictionary don't show up more than once. Perhaps this is a feature that could be added later.
+
+### Website made by Adam Betinsky in January 2026 using the instructions provided. GitHub Repository made in February 2026.
