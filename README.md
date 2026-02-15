@@ -33,4 +33,42 @@ The following technologies are used in implementing the website:
 - Git
 - GitHub
 
-It's important to also note that some parts of this website contain code written by AI (specifically, the php files). Please read the AI disclosures in the main directory of this repository to leaarn more.
+It's important to also note that some parts of this website contain code and/or were implemented based on instructions written by ChatGPT 5.2, an AI platform by Open AI (specifically, the PHP files and web browser security rule support). Please read the AI disclosures in the main directory of this repository to learn more.
+
+## High-level Setup Instructions
+To implemt the website on your own, follow the steps listed in the "Getting Started with LAMP" document in the "providedDocumentationAndTestFiles" directory of this repository. However, for ease, the overview of those steps are:
+
+1. Setup a cloud server to digitally host your website, and ensure it has LAMP Stack functionality. DigitalOcean is a great website that can do this, but there are others that work as well. Make sure to note the IP address that is generated for your website and the root password that you create. 
+
+    - NOTE: This step will likely include a small cost.
+
+2. Use a website to purchase a domain for your website. You can name it whatever you like. 
+
+    - NOTE: This step will likely include a small cost. 
+
+3. Use your domain purchasing or cloud server website to setup the DNS settings for your website. Specifically, setup your domain to point to the IP address listed in step 1.
+
+4. SSH into the root of the server using the password you made in step 1. Rename  the "testIndex.html" file from the "providedDocumentationAndTestFiles" of this repository to "index.html". Then, put the file into the "/var/www/html" directory of your website.
+
+5. Wait a few minutes, and test that the above steps worked by seeing if the "testIndex.html" file loads when you go to your website on the internet. This may take up to 30 minutes or longer to fully work. DO NOT PROCEED until the prior steps are working. If you encounter issues, make sure to retrace your steps
+
+    - NOTE: By default, the website only include HTTP support and NOT HTTPS support. On some internet browsers (like Google Chrome), you need to add HTTPS support to meet the security requirements of the browser. To do this, use Certbot while SSH'd into the root of your server. You can find instructions on how to do this via a quick google search. 
+
+6. While SSH'd into the root of your server, access mySQL and create the COP4331 databse as described in the document mentioned above.
+
+7. While SSH'd into the root of your server, copy all of the non-testing directories in this repository (that is, copy the "api", and "public" directories) into the "/var/www/html" directory. Tools like PuTTY can make this easier, but you can always use simple bash commands like "scp". Leave them as is.
+
+8. In order to avoid posting user passwords on the internet, the PHP files use a configuration file titled "config.php" that is hidden in this repository. As such, you will need to add one into your "/var/www/html/api" directory to ensure the website functions correctly. The contents of this file should look like:
+
+```php
+<?php
+$DB_HOST = "localhost";
+$DB_USER = "your_username";
+$DB_PASS = "your_password";
+$DB_NAME = "COP4331";
+?>
+
+```
+
+9. You've now completed the High-level Setup for the website!
+
