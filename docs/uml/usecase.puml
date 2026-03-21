@@ -1,0 +1,45 @@
+' PlantUML file for the Use Case Diagram in POOSD Assignment #3 with Dr. Aashish Yadavally
+' Code written by Adam Betinsky on Saturday, March 21st, 2026
+
+' START of "usecase.puml"
+@startuml
+
+' Define the left to right direction
+left to right direction 
+
+' Define the main user for the diagram
+actor User as mainUser
+
+' Define the rectangle for the COLORS Lab Web Application
+rectangle "COLORS Lab Web Application" {
+
+    ' Define the main usecases a USER can do (with aliases for easy linking later)
+    usecase "Login" as UC1
+    usecase "Logout" as UC2
+    usecase "Add Color" as UC3
+    usecase "Search Color" as UC4
+
+    ' Define the main usecases the INTERNAL SYSTEM does after specific USER actions (with aliases for easy linking later)
+    usecase "Verify Credentials" as IUC1
+    usecase "Store Color in Database" as IUC2
+    usecase "Retrieve Matching Color(s) from Database" as IUC3
+}
+
+' Link the main user to the main USER usecases
+mainUser -- UC1
+mainUser -- UC2
+mainUser -- UC3
+mainUser -- UC4
+
+' Link the specific USER actions that the INTERNAL SYSTEM must do with an "<<include>>" (note that there is a lot of spacing for each "<<include>" so it doesn't render on top of a link)
+UC1 .> IUC1 : "                     <<include>>                              "  
+UC3 .> IUC2 : "                     <<include>>                              "
+UC4 .> IUC3 : "                     <<include>>                              "
+
+' Add footer to the diagram
+footer Use Case Diagram for POOSD Assignment 3 - Adam Betinsky
+skinparam footerFontColor black
+
+@enduml
+
+' END OF usecase.puml
