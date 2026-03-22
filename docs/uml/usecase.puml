@@ -5,7 +5,7 @@
 @startuml
 
 ' Define the left to right direction
-left to right direction 
+left to right direction
 
 ' Define the main user for the diagram
 actor User as mainUser
@@ -32,7 +32,7 @@ mainUser -- UC3
 mainUser -- UC4
 
 ' Link the specific USER actions that the INTERNAL SYSTEM must do with an "<<include>>" (note that there is a lot of spacing for each "<<include>" so it doesn't render on top of a link)
-UC1 .> IUC1 : "                     <<include>>                              "  
+UC1 .> IUC1 : "                     <<include>>                              "
 UC3 .> IUC2 : "                     <<include>>                              "
 UC4 .> IUC3 : "                     <<include>>                              "
 
@@ -42,4 +42,4 @@ skinparam footerFontColor black
 
 @enduml
 
-' END OF usecase.puml
+' END OF "usecase.puml"
