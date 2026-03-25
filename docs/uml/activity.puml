@@ -1,5 +1,5 @@
 ' PlantUML file for the Activity Diagram in POOSD Assignment #3 with Dr. Aashish Yadavally
-' Code written by Adam Betinsky on Saturday, March 21st, 2026
+' Code written by Adam Betinsky on Saturday, March 21st, 2026 and Wednesday, March 25th, 2026
 
 ' START OF "activity.puml"
 @startuml
@@ -15,17 +15,15 @@ start
 while (Leave The Website?) is (No)
 
     ' Flow for inital login attempt
-    :Enter Account Credentials
-    (Username and Password) to login;
+    :Enter Account Credentials (Username and Password) in Their Respective Text Boxes; Press "Do It" Button to Login;
     :Validate Login;
 
     ' While loop while attempting to login
     while (Login Valid?) is (No)
 
         ' Flow for bad login and re-attempting
-        :Show Login Error Message;
-        :Re-enter Account Credentials
-        (Username and Password) to Re-Attempt Login;
+        :Display "User/Password combination incorrect" Error Message;
+        :Re-enter Account Credentials (Username and Password) in Their Respective Text Boxes; Press "Do It" Button to Re-Attempt Login;
 
     endwhile (Yes)
 
@@ -40,14 +38,14 @@ while (Leave The Website?) is (No)
 
         ' Flow for adding a color to the database
         if(Add a Color?) then (Yes)
-            :Enter New Color;
-            :Add Inputted Color Into Database;
-            :Show Confirmation Message;
+            :Enter New Color Into the "Color To Add" Text Box;
+            :Press "Add Color" Button to Add Inputted Color Into Database;
+            :Display "Color has been added" Confirmation Message;
 
         ' Flow for searching a color to the database (note there is a bunch of spacing on line 48 so the "No" keyword stays closer to the middle of the link)
         (No                                                                                                           ) elseif (Search For a Color?) then (Yes)
-            :Enter Color to Search;
-            :Query Database for Inputted Color (Including Partial Matches);
+            :Enter Color to Search in the "Color To Search For" Test Box;
+            :Press "Search Color" Button to Query Database for Inputted Color (Including Partial Matches);
             :Display Any Color(s) Found;
 
             ' Flow for the else case - the user must want to leave the website while still being logged in. Doing this will log them out behind the scenes, so stop here
@@ -58,6 +56,9 @@ while (Leave The Website?) is (No)
         endif
 
     endwhile (Yes)
+
+:Press "Logout" Button to Logout and Return to Home Page (index.html);
+
 
 endWhile (Yes)
 
