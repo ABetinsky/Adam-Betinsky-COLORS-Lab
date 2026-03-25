@@ -1,0 +1,31 @@
+' PlantUML file for the Class Diagram in POOSD Assignment #3 with Dr. Aashish Yadavally
+' Code written by Adam Betinsky on Wednesday, March 25th, 2026
+
+' START of "class.puml"
+@startuml
+
+' Define a class representing a user. All private variables are attributes to each user (with "Login" also being the Username)
+class User {
+    - ID
+    - FirstName
+    - LastName
+    - Login
+    - Password
+}
+
+' Define a class representing a color. All private variables are attributes to each color. Note that "ID" is the ID for the color in the database, and "UserID" is the ID for the user associated with that color
+class Color {
+    - ID 
+    - Name
+    - UserID
+}
+
+' Define a relationship that every 1 user can have 0 or infinitely many colors in their database
+User "1" --> "0..*" Color
+
+' Add footer to the diagram
+footer Class Diagram for POOSD Assignment 3 - Adam Betinsky\n (Note that a RED hollow square means a private variable (or attribute) for a member of a given class)
+skinparam footerFontColor black
+
+@enduml
+' END OF "class.puml"
