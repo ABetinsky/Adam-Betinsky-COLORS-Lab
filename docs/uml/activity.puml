@@ -4,6 +4,10 @@
 ' START OF "activity.puml"
 @startuml
 
+' Add header to the diagram
+header Activity Diagram for POOSD Assignment 3 - Adam Betinsky
+skinparam HeaderFontColor black
+
 ' Add start node as the user must want to visit the site
 start
 
@@ -64,10 +68,6 @@ endWhile (Yes)
 
 ' The user must want to leave the website, so stop here as well
 stop
-
-' Add footer to the diagram
-footer Activity Diagram for POOSD Assignment 3 - Adam Betinsky
-skinparam footerFontColor black
 
 @enduml
 ' END OF "activity.puml"

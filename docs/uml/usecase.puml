@@ -1,8 +1,12 @@
 ' PlantUML file for the Use Case Diagram in POOSD Assignment #3 with Dr. Aashish Yadavally
-' Code written by Adam Betinsky on Saturday, March 21st, 2026
+' Code written by Adam Betinsky on Saturday, March 21st, 2026 and Wednesday, March 25th, 2026
 
 ' START of "usecase.puml"
 @startuml
+
+' Add header to the diagram
+header Use Case Diagram for POOSD Assignment 3 - Adam Betinsky
+skinparam HeaderFontColor black
 
 ' Define the left to right direction
 left to right direction
@@ -35,10 +39,6 @@ mainUser -- UC4
 UC1 .> IUC1 : "                     <<include>>                              "
 UC3 .> IUC2 : "                     <<include>>                              "
 UC4 .> IUC3 : "                     <<include>>                              "
-
-' Add footer to the diagram
-footer Use Case Diagram for POOSD Assignment 3 - Adam Betinsky
-skinparam footerFontColor black
 
 @enduml
 

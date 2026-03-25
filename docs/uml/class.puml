@@ -4,6 +4,10 @@
 ' START of "class.puml"
 @startuml
 
+' Add header to the diagram
+header Class Diagram for POOSD Assignment 3 - Adam Betinsky
+skinparam HeaderFontColor black
+
 ' Deactivate any graphics for icons
 skinparam classAttributeIconSize 0
 
@@ -14,6 +18,11 @@ class User {
     - LastName
     - Login
     - Password
+
+    + login()
+    + logout()
+    + addColor() [LOGIN REQUIRED]
+    + searchColor() [LOGIN REQUIRED]
 }
 
 ' Define a class representing a color. All private variables are attributes to each color. Note that "ID" is the ID for the color in the database, and "UserID" is the ID for the user associated with that color
@@ -27,7 +36,7 @@ class Color {
 User "1" --> "0..*" Color
 
 ' Add footer to the diagram
-footer Class Diagram for POOSD Assignment 3 - Adam Betinsky
+footer (Note that a "-" indicates a private attribute and a "+" indicates a public attribute)\n (Also, per Dr. Yadavally's advice, I added the basic operations a user can do as public methods to the User class, despite not having those methods in the code itself)
 skinparam footerFontColor black
 
 @enduml
