@@ -4,6 +4,9 @@
 ' START of "class.puml"
 @startuml
 
+' Deactivate any graphics for icons
+skinparam classAttributeIconSize 0
+
 ' Define a class representing a user. All private variables are attributes to each user (with "Login" also being the Username)
 class User {
     - ID
@@ -24,7 +27,7 @@ class Color {
 User "1" --> "0..*" Color
 
 ' Add footer to the diagram
-footer Class Diagram for POOSD Assignment 3 - Adam Betinsky\n (Note that a RED hollow square means a private variable (or attribute) for a member of a given class)
+footer Class Diagram for POOSD Assignment 3 - Adam Betinsky
 skinparam footerFontColor black
 
 @enduml
