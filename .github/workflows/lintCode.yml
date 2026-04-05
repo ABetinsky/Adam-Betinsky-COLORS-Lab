@@ -1,0 +1,3 @@
+name: POOSD Assignment 4 Linting Workflow
+
+on: [push, pull_request]
