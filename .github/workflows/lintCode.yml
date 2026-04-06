@@ -1,3 +1,10 @@
 name: POOSD Assignment 4 Linting Workflow
 
 on: [push, pull_request]
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: run checkout repoistory
+              uses: actions/checkout@v4
