@@ -1,3 +1,5 @@
+// Code written by Adam Betinsky on April 5th, 2026
+
 import globals from "globals"; // Import required globals library
 
 // Object to return
