@@ -1,0 +1,22 @@
+name: POOSD Assignment 4 Linting Workflow
+
+on: [push, pull_request]
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Use Node.js (as required)
+              uses: actions/setup-node@v4
+              with:
+                node-version: '20'
+
+            - name: Install NPM
+              run: npm install
+
+            - name: Run the lint!
+              run: npm run lint
+
