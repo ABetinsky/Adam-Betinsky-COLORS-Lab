@@ -14,7 +14,7 @@ export default [
     },
 
     //Check all js files in the repo and ignore the words "test" and "expect"
-    files: ["**/*.js"],
+    files: ["**/*test.js"],
     languageOptions: {
       globals: {
         test: "readonly",
