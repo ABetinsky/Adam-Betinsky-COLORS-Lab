@@ -1,4 +1,4 @@
-// Code written by Adam Betinsky on April 5th, 2026
+// Code written by Adam Betinsky on April 5th, 2026 and extended on April 20th, 2026
 
 import globals from "globals"; // Import required globals library
 
@@ -10,6 +10,15 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,  
+      },
+    },
+
+    //Check all js files in the repo and ignore the words "test" and "expect"
+    files: ["**/*.js"],
+    languageOptions: {
+      globals: {
+        test: "readonly",
+        expect: "readonly"
       },
     },
 
