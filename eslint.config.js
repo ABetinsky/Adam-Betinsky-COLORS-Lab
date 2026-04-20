@@ -13,12 +13,13 @@ export default [
       },
     },
 
-    //Check all js files in the repo and ignore the words "test" and "expect"
-    files: ["**/*test.js"],
+    //Check all js files in the repo and ignore the words "test", "expect" and "fetch"
+    files: ["**/*.test.js"],
     languageOptions: {
       globals: {
         test: "readonly",
-        expect: "readonly"
+        expect: "readonly",
+        fetch: "readonly"
       },
     },
 

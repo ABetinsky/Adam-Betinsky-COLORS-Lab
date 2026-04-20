@@ -32,6 +32,6 @@ jobs:
               run: npm run lint
     
             # Run the automated tests (assignment 5)!
-            - name: Run Automated Tests
+            - name: Run Automated Tests!
               run: npm test
 
