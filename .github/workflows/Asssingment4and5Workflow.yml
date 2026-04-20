@@ -30,7 +30,11 @@ jobs:
             # Run the linting using the script I made in the package.json file!
             - name: Run the lint!
               run: npm run lint
-            
+    
+    tests:
+      runs-on: ubuntu-latest #run on the latest version of ubuntu
+      
+      steps:
             # Run the automated tests (assignment 5)!
             - name: Run Automated Tests
               run: npm test
