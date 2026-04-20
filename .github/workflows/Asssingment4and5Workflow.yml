@@ -8,7 +8,7 @@ on: [push, pull_request]
 
 # Declare jobs to be done when using the "lint" keyword
 jobs:
-    lint:
+    lint_and_runTests:
         runs-on: ubuntu-latest #run on the latest version of ubuntu
 
         # Steps to be executed
@@ -31,10 +31,6 @@ jobs:
             - name: Run the lint!
               run: npm run lint
     
-    tests:
-      runs-on: ubuntu-latest #run on the latest version of ubuntu
-      
-      steps:
             # Run the automated tests (assignment 5)!
             - name: Run Automated Tests
               run: npm test
