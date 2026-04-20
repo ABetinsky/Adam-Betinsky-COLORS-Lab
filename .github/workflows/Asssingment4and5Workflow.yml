@@ -1,0 +1,37 @@
+# Code written by Adam Betinsky on April 5th, 2026 and extended on April 20th, 2026
+
+# Add name to workflow 
+name: POOSD Assignment 4 and 5 Workflow
+
+# Declare when to run - on push and pull requests per the assignment
+on: [push, pull_request]
+
+# Declare jobs to be done when using the "lint" keyword
+jobs:
+    lint:
+        runs-on: ubuntu-latest #run on the latest version of ubuntu
+
+        # Steps to be executed
+        steps:
+            # Get the code from the repo
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            # Run node.js on version 20
+            - name: Use Node.js (as required)
+              uses: actions/setup-node@v4
+              with:
+                node-version: '20'
+
+            # Install npm (and dependencies in the json and js config files within the repo)
+            - name: Install NPM
+              run: npm install
+
+            # Run the linting using the script I made in the package.json file!
+            - name: Run the lint!
+              run: npm run lint
+            
+            # Run the automated tests (assignment 5)!
+            - name: Run Automated Tests
+              run: npm test
+
