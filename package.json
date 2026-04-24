@@ -1,12 +1,15 @@
 {
+  "type": "module",
   "devDependencies": {
     "eslint": "^10.2.0",
     "globals": "^17.4.0",
     "htmlhint": "^1.9.2",
+    "jest": "^30.3.0",
     "stylelint": "^17.6.0",
     "stylelint-config-standard": "^40.0.0"
   },
   "scripts": {
-    "lint": "npx eslint **/*.js && npx htmlhint **/*.html && npx stylelint **/*.css "
+    "lint": "npx eslint **/*.js && npx htmlhint **/*.html && npx stylelint **/*.css ",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   }
 }

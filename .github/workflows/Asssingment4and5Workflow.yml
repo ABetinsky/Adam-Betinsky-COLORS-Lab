@@ -1,14 +1,14 @@
-# Code written by Adam Betinsky on April 5th, 2026
+# Code written by Adam Betinsky on April 5th, 2026 and extended on April 20th, 2026
 
 # Add name to workflow 
-name: POOSD Assignment 4 Linting Workflow
+name: POOSD Assignment 4 and 5 Workflow
 
 # Declare when to run - on push and pull requests per the assignment
 on: [push, pull_request]
 
 # Declare jobs to be done when using the "lint" keyword
 jobs:
-    lint:
+    lint_and_runTests:
         runs-on: ubuntu-latest #run on the latest version of ubuntu
 
         # Steps to be executed
@@ -30,4 +30,8 @@ jobs:
             # Run the linting using the script I made in the package.json file!
             - name: Run the lint!
               run: npm run lint
+    
+            # Run the automated tests (assignment 5)!
+            - name: Run Automated Tests!
+              run: npm test
 
